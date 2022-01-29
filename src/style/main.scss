@@ -19,7 +19,15 @@ body {
     width: 66vw;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
 $color-gray-one: #666666;
 $color-gray-two: #b3b3b3;
+$color-blue-one: #0079ff;
 
-@import "./searchBar.scss"
+@import "./searchBar.scss";
+@import "./recentPosts.scss";

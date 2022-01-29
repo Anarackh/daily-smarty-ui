@@ -18,3 +18,8 @@ body {
     height: 100vh;
     width: 66vw;
 }
+
+$color-gray-one: #666666;
+$color-gray-two: #b3b3b3;
+
+@import "./searchBar.scss"

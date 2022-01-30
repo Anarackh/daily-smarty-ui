@@ -20,5 +20,19 @@
             grid-template-columns: 1fr 1fr 1fr;
             grid-gap: 46px;
         }
+
+        .recent-post {
+            .recent-post-topics {
+                margin-top: 10px;
+                .post-topic {
+                    color: $color-gray-two;
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-align: left;
+                    margin-right: 8px;
+                }
+            }
+        }
     }
 }
+

@@ -49,6 +49,9 @@
 .post-link {
     display: flex;
     min-height: 70px;
+    flex-basis: 250px;
+    margin-right: 37px;
+
     .post-link-box {
         min-width: 70px;
         background-color: $color-gray-three;

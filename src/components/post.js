@@ -18,6 +18,26 @@ class Post extends Component {
         return topics;
     }
 
+    getNameForPostLink(str) {
+        let lastIndexOf = str.lastIndexOf("/");
+        let postLinkName = str.substring(lastIndexOf + 1, str.length);
+
+        if((lastIndexOf + 1) === str.length) {
+            postLinkName = str.slice(0, lastIndexOf);
+            lastIndexOf = postLinkName.lastIndexOf("/");
+            postLinkName = str.substring(lastIndexOf + 1, str.length - 1);
+        }
+
+        if(postLinkName.includes(".html")) {
+            postLinkName = postLinkName.substring(0, postLinkName.length - 5)
+        }
+
+        if(postLinkName.includes(".htm")) {
+            postLinkName = postLinkName.substring(0, postLinkName.length - 4)
+        }
+        return postLinkName;
+    }
+
     renderLinks() {
         let links = this.props.post_links.map((post_link, index) => {
             return (
@@ -26,7 +46,7 @@ class Post extends Component {
 
                     </div>
                     <div className="post-link-link">
-                        <a href={post_link.link_url}>Useful Link#{index +1}</a>
+                        <a href={post_link.link_url}>{this.getNameForPostLink(post_link.link_url)}</a>
                     </div>
                 </div>
             )
